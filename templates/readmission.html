@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Hospital Readmission Predictor</h1>
+      <p class="lead">Please enter your information below.  Leave any unknown characteristics blank and we will use an average as a placeholder.</p>
+      <hr class="my-4">
+		<form action=""method="POST">
+			<label for="race">Ethnicity:</label><br>
+			<select class="form-input" type="text" name="race" placeholder="">
+			  <option value="Caucasian">Caucasian</option>
+			  <option value="AfricanAmerican">African American</option>
+			  <option value="Asian">Asian</option>
+			  <option value="Hispanic">Hispanic</option>
+			  <option value="Other">Other</option>
+			</select><br>
+			<label for="gender">Sex:</label><br>
+			<select class="form-input" type="text" name="gender" placeholder="">
+			  <option value="male">Male</option>
+			  <option value="female">Female</option>
+			</select><br>
+			<label for="age">Age:</label><br>
+			<input class="form-input" type="text" name="age" placeholder="(years)"><br>
+			<label for="diag_1">Primary Diagnosis:</label><br>
+			<select class="form-input" type="text" name="diag_1" placeholder="">
+			  <option value="Diabetes">Diabetes</option>
+			  <option value="Neoplasms">Neoplasms</option>
+			  <option value="Other/None">Other</option>
+			  <option value="Circulatory">Circulatory</option>
+			  <option value="Respiratory">Respiratory</option>
+			  <option value="Injury">Injury</option>
+			  <option value="Musculoskeletal">Musculoskeletal</option>
+			  <option value="Digestive">Digestive</option>
+			  <option value="Genitourinary">Genitourinary</option>
+			</select><br>
+			<label for="diag_2">Secondary Diagnosis:</label><br>
+			<select class="form-input" type="text" name="diag_2" placeholder="">
+			  <option value="Diabetes">Diabetes</option>
+			  <option value="Neoplasms">Neoplasms</option>
+			  <option value="Other/None">Other</option>
+			  <option value="Circulatory">Circulatory</option>
+			  <option value="Respiratory">Respiratory</option>
+			  <option value="Injury">Injury</option>
+			  <option value="Musculoskeletal">Musculoskeletal</option>
+			  <option value="Digestive">Digestive</option>
+			  <option value="Genitourinary">Genitourinary</option>
+			</select><br>
+			<label for="diag_3">Tertiary Diagnosis:</label><br>
+			<select class="form-input" type="text" name="diag_3" placeholder="">
+			  <option value="Diabetes">Diabetes</option>
+			  <option value="Neoplasms">Neoplasms</option>
+			  <option value="Other/None">Other</option>
+			  <option value="Circulatory">Circulatory</option>
+			  <option value="Respiratory">Respiratory</option>
+			  <option value="Injury">Injury</option>
+			  <option value="Musculoskeletal">Musculoskeletal</option>
+			  <option value="Digestive">Digestive</option>
+			  <option value="Genitourinary">Genitourinary</option>
+			</select><br>
+			<label for="number_diagnoses">Number of Diagnoses:</label><br>
+			<input class="form-input" type="text" name="number_diagnoses" placeholder="#"><br>
+			<input type="submit">
+		</form>
+		<p> Was your visit similar to others who were readmitted within 30 days of their initial vist?</p>
+        <p>{{ prediction2 }}</p>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}
+

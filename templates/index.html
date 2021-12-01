@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome!</h1>
+      <p class="lead">Please use the navigation bar above to select which assessment you would like to take.</p>
+	  
+	  <p class="lead">The diabetes risk assessment will take in a few health related variables and compare these to other people with and without diabetes to tell if these characteristics 
+	  are similar to those in people who are diabetic.  Any unknown information may be left blank and we will subsitute the value with the national average.  Please keep in mind that any
+	  unknown variables will decrease the accuracy of this assessment.  
+	  While we cannot tell you if you are diabetic or not, we hope to help inform you if you may be at risk of diabetes and should speak with your doctor.</p>
+	  
+	  <p class="lead">The readmission assessment is for people who are diabetic and have recently been hospitalized.  The assessment will take in some information about your recent visit and
+	  make a prediction of whether you are at high risk of being readmitted to the hospital within the 30 days folowing the visit.  While we cannot predict if you will or will not be 
+	  readmitted, we hope this test will help inform decisions made in regards to recovery following the initial visit.</p>
+    </div>
+  </div>
+{% endblock %}

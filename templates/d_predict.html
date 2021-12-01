@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Diabetes Trait Predictor</h1>
+      <p class="lead">Please enter your information below.  Leave any unknown characteristics blank and we will use an average as a placeholder.</p>
+      <hr class="my-4">
+		<form action=""method="POST">
+			<label for="pregnancies">Number of Pregnancies:</label><br>
+			<input class="form-input" type="text" name="pregnancies" placeholder=""><br>
+			<label for="glucose">Glucose:</label><br>
+			<input class="form-input" type="text" name="glucose" placeholder="(mg/dL)"><br>
+			<label for="bloodpressure">Blood Pressure:</label><br>
+			<input class="form-input" type="text" name="bloodpressure" placeholder="(mmHg)"><br>
+			<label for="skinthickness">Skin Thickness:</label><br>
+			<input class="form-input" type="text" name="skinthickness" placeholder="(mm)"><br>
+			<label for="insulin">Insulin Level:</label><br>
+			<input class="form-input" type="text" name="insulin" placeholder="(IU/mL)"><br>
+			<label for="bmi">BMI:</label><br>
+			<input class="form-input" type="text" name="bmi" placeholder="(kg/m²)"><br>
+			<label for="age">Age:</label><br>
+			<input class="form-input" type="text" name="age" placeholder="(years)"><br>
+			<input type="submit">
+		</form>
+		<p> Do you share characteristics with people with diabetes?</p>
+        <p>{{ predict }}</p>
+    </div>
+  </div>
+
+{% endblock %}
